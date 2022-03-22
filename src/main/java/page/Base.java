@@ -3,6 +3,7 @@ package page;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
+
 public abstract class Base {
     protected WebDriver driver;
 
@@ -11,3 +12,6 @@ public abstract class Base {
         PageFactory.initElements(driver, this);
     }
 }
+
+
+//WebDriver driver = Drivers.getDriver(Drivers.Driver.CHROMEDRIVER);
