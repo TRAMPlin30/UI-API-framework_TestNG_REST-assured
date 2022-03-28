@@ -123,32 +123,39 @@ public class Locators {
 
 
     public interface SecretariesPage {
-        String  EDIT_SECRETARY = "//td[@class='text-center']",
-                SWITCH_DISABLED_SECRETARY = "//label[@class = 'custom-control-label list-of-secretaries__custom-control-label___3l-9N')]",
+        String  HEADER_SECRETARIES = "//h2[@class='col-6']",
+                //header
+                VIEW_SWITCH_LIST_SECRETARY = "//button[@class='btn btn-secondary']", //?
+                VIEW_SWITCH_CARD_SECRETARY = "//button[@class='btn btn-secondary']",
                 SEARCH_FIELD_SECRETARY = "//input[@class ='search__searchInput___34nMl']",
-                VIEW_SWITCH_LIST_SECRETERY = "//button[@class='btn btn-secondary']", //?
-                VIEW_SWITCH_CARD_SECRETERY = "//button[@class='btn btn-secondary']",
-                LIST_NAME_SECRETARY = "//span[contains(text(),'Name')]",
-                LIST_SURNAME_SECRETARY = "//span[contains(text(),'Surname')]",
-                LIST_EMAIL_SECRETARY = "//span[contains(text(),'Email')]",
-                INFO_SECRETARY = "//td[not(contains(@class,'text-center'))]",
-                DROPDOWN_ROWS_SECRETARY = "//div[@class='row justify-content-between align-items-center mb-3 list-of-secretaries__paginate___264GU']",
-                ADD_SECRETARY = "//span[contains(text(),'Add a secretary')]";
+                SWITCH_DISABLED_SECRETARY = "//label[@class = 'custom-control-label list-of-secretaries__custom-control-label___3l-9N')]",
+                ADD_SECRETARY = "//span[contains(text(),'Add a secretary')]",
+                //table
+                SECRETARY_ROW = "//tbody/tr",
+                HEAD_NAME_SECRETARY = "//span[contains(text(),'Name')]",
+                HEAD_SURNAME_SECRETARY = "//span[contains(text(),'Surname')]",
+                HEAD_EMAIL_SECRETARY = "//span[contains(text(),'Email')]",
+                EDIT_SECRETARY= "//td[@class='text-center']",
+                ROW_TABLE_SECRETARIES = "//td[not(contains(@class,'text-center'))]";
     }
 
-    public interface EditSecretaryDetailsTab {
+    public interface EditSecretary {
         String SECRETARY_DETAILS_ARROW_BUTTON = "//*[@class ='bi bi-arrow-left']",
                 EDIT_SECRETARY_TAB = "//a[@class='nav-item nav-link tab__tab___1xEn9 tab__active___3e65x']",
-                SECRETARIES_FIRST_NAME_WINDOW = "//input[@name='firstName']",
-                SECRETARIES_LAST_NAME_WINDOW = "//input[@name='lastName']",
-                SECRETARIES_EMAIL_WINDOW = "//input[@name='email']",
-                SECRETARIES_LAY_OFF_BUTTON = "//button[text()='Lay off']",
-                SECRETARIES_SAVE_BUTTON = "//button[text()='Save']",
-                SECRETARIES_DETAILS_TITLE = "//a[@class='nav-item nav-link tab__tab___1xEn9']",
-                SECRETARIES_DETAILS_FIRST_NAME = "//input[@name = 'firstName']",
-                SECRETARIES_DETAILS_LAST_NAME = "//input[@name = 'lastName']",
-                SECRETARIES_DETAILS_EMAIL = "//input[@name = 'email']",
+                SECRETARY_FIRST_NAME = "//input[@name='firstName']",
+                SECRETARY_LAST_NAME = "//input[@name='lastName']",
+                SECRETARY_EMAIL = "//input[@name='email']",
+                SECRETARY_LAY_OFF_BUTTON = "//button[text()='Lay off']",
+                SECRETARY_SAVE_BUTTON = "//button[text()='Save']",
+                SECRETARY_DETAILS_TITLE = "//a[@class='nav-item nav-link tab__tab___1xEn9']",
                 RESET_SECRETARY_BUTTON = "//button[text()='Reset']";
+    }
+    public interface SecretaryDetails {
+        String SECRETARY_DETAILS_ARROW_BUTTON = "//*[@class ='bi bi-arrow-left']",
+                SECRETARY_DETAILS_TITLE = "//a[@class='nav-item nav-link tab__tab___1xEn9']",
+                SECRETARY_DETAILS_FIRST_NAME = "//div[@class = 'col-12 col-md-6']",
+                SECRETARY_DETAILS_LAST_NAME = "//div[@class = 'col-12 col-md-6']",
+                SECRETARY_DETAILS_EMAIL = "//div[@class = 'col-12 col-md-6']";
     }
 
     public interface ListOfCourses{
