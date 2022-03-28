@@ -1,30 +1,25 @@
-package page;
+package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
 import static constants.Constants.IMPLISITLY_WAIT;
-import static constants.Locators.PaginationItems.*;
 
-public abstract class BasePage extends Base{
+public class BasePage {
 
-    @FindBy(xpath = BUTTON_PREVIOUS_PAGE )
-    public WebElement buttonPreviousPage;
-    @FindBy(xpath = BUTTON_NEXT_PAGE )
-    public WebElement buttonNextPage;
+    protected WebDriver driver;
 
     public BasePage(WebDriver driver) {
-        super(driver);
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
     }
 
-    public void openBaseURL() {
-        String url = "http://localhost:8080/auth";
+    public void openURL(String url) {
         driver.get(url);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLISITLY_WAIT));
     }
@@ -32,8 +27,9 @@ public abstract class BasePage extends Base{
     public void waitWebElementVisible(WebElement element, int time) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(time));
         try {
-            wait.until(ExpectedConditions.presenceOfElementLocated((By) element));
+            wait.until(ExpectedConditions.visibilityOf(element));
         } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
@@ -59,13 +55,4 @@ public abstract class BasePage extends Base{
 
     }
 
-    public void clickButtonPreviousPage() {
-        buttonPreviousPage.click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLISITLY_WAIT));
-    }
-
-    public void clickButtonNextPage() {
-        buttonNextPage.click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLISITLY_WAIT));
-    }
 }

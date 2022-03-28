@@ -1,5 +1,6 @@
 package properties;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -7,12 +8,14 @@ import org.openqa.selenium.opera.OperaDriver;
 
 import java.time.Duration;
 
+import static constants.Constants.IMPLISITLY_WAIT;
+
 public class Drivers {
 
     public enum Driver {
-        CHROMEDRIVER("src/main/resources/chromedriver.exe", "webdriver.chrome.driver"),
-        FIREFOXDRIVER("src/main/resources/geckodriver.exe", "webdriver.gecko.driver"),
-        OPERADRIVER("src/main/resources/operadriver.exe", "webdriver.opera.driver");
+        CHROMEDRIVER("src/main/resources/drivers/chromedriver.exe", "webdriver.chrome.driver"),
+        FIREFOXDRIVER("src/main/resources/drivers/geckodriver.exe", "webdriver.gecko.driver"),
+        OPERADRIVER("src/main/resources/drivers/operadriver.exe", "webdriver.opera.driver");
         private final String PATHtoDRIVER;
         private final String NAMEofDRIVER;
         Driver(String PATHtoDRIVER, String NAMEofDRIVER) {
@@ -46,7 +49,7 @@ public class Drivers {
                 break;
         }
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLISITLY_WAIT));
         return driver;
     }
 }
