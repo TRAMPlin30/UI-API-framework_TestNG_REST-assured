@@ -3,23 +3,45 @@ package constants;
 public class Locators {
 
     public interface RegistrationPage {
-        String REGISTRATION_FORM = "//h3[text()='Sign up to WHAT']",
+        String  REGISTRATION_FORM = "//h3[text()='Sign up to WHAT']",
                 FIRST_NAME_FIELD = "firstName",
                 LAST_NAME_FIELD = "lastName",
                 EMAIL_ADDRESS_FIELD = "email",
                 PASSWORD_FIELD = "password",
                 CONFIRM_PASSWORD_FIELD = "confirm-password",
                 BUTTON_SIGN_UP = "//button[text()='Sign up']",
-                BUTTON_BACK = "//button[text()='Back']";
+                LOGIN_LINK = "//a[@href='/auth']",
+                BUTTON_BACK = "//button[text()='Back']",
+                MESSAGE_REGISTRATION_DONE = "//div[@class='modal-header']/h4",
+                MESSAGE_REGISTRATION_DONE_TEXT = "//div[@class='modal-window__modal-body___3v1gd modal-body']";
     }
 
-    public interface LoginPage {
-        String LOGIN_FORM = "//h3[text()='Sign in to WHAT']",
+    public interface AuthPage {
+        String  LOGIN_FORM = "//h3[text()='Sign in to WHAT']",
                 EMAIL_FIELD = "email",
                 PASSWORD_FIELD = "password",
                 BUTTON_SIGN_IN = "//button[text()='Sign in']",
-                REGISTRATION_LINK = "//a[@href='/registration']";
+                REGISTRATION_LINK = "//a[@href='/registration']",
+                FORGOT_PASSWORD_LINK = "//a[@href='/forgot-password']",
+                MESSAGE_ALERT_REQUIRED_EMAIL = "//div[@class='form-group'][1]/p[@class='text-danger']",  //textContent: "This field is required" for emailField
+                MESSAGE_ALERT_REQUIRED_PASSWORD = "//div[@class='form-group'][2]/p[@class='text-danger']", //textContent: "This field is required" for passwordField
+                MESSAGE_ALERT_INVALID_DATA_AFTER_CLICK = "//p[@class='text-center text-danger mt-2']";    // textContent: 'Email' is not a valid email address.
+                                                                                                        // textContent: The length of 'Password' must be at least 8 characters.
+                                                                                                                         // You entered 5 characters.
+                                                                                                         //textContent: Password must have at least eight characters, at least one uppercase letter,
+                                                                                                                         // one lowercase letter one number and special character
+                                                                                                         //textContent: Incorrect credential, please try again.
     }
+
+    public interface ForgotPasswordPage {
+        String  FORGOT_PASSWORD_FORM = "//div[@class='forgot-password__form___8bk7S card, shadow']",
+                EMAIL_ADDRESS_FIELD = "email",
+                BUTTON_SEND = "//button[text()='Send']",
+                BUTTON_BACK = "//button[text()='Back']",
+                MESSAGE_FORGOT_PASSWORD_SEND = "//div[@class='modal-header']/h4",
+                MESSAGE_FORGOT_PASSWORD_SEND_TEXT = "//div[@class='modal-window__modal-body___3v1gd modal-body']";
+    }
+
     public interface SideBarItems {
         String  SIDEBAR_LIST = "//div[@class='sidebar__sidebar__links___GkXK-']",
                 SIDEBAR_ITEM_STUDENTS = "//a[@href='/students']",
@@ -32,6 +54,7 @@ public class Locators {
                 SIDEBAR_ITEM_UNASSIGNED = "//a[@href='/unassigned']",
                 SIDEBAR_ITEM_HOMEWORK = "//a[@href='/homework']";
     }
+
     public interface PaginationItems {
         String  DROPDOWN_ROWS = "//select[@class='form-control']",
                 DROPDOWN_ROWS_ITEM_9 = "//select[@class='form-control']/option[text()='9']",
