@@ -17,11 +17,11 @@ public class SecretariesPageSteps extends SecretariesPage {
         secretariesPage.clickEditIcon();
         return new EditSecretaryPageSteps(driver);
     }
-    public SecretariesPage inputSearchSecretary(String nameSurName) {
+    /*public SecretariesPage inputSearchSecretary(String nameSurName) {
         fillField(searchInputField, "r");   //Robert Jones
         fillField(searchInputField, nameSurName);
         return this;
-    }
+    }*/
 
 
 
