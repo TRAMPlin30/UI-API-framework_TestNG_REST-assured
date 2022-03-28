@@ -3,7 +3,6 @@ package auth;
 import base.BaseTest;
 import org.testng.annotations.Test;
 import properties.Roles;
-import steps.mentors.MentorsTablePageSteps;
 
 public class AuthPageTest extends BaseTest {
 
@@ -21,18 +20,5 @@ public class AuthPageTest extends BaseTest {
                 .checkThatButtonSignInIsEnabled()
                 .clickSignInButton()
                 .checkThatUserLogged(Roles.MENTOR);
-    }
-
-    @Test
-    public void verifyThatUserCanGetPageMentors() throws InterruptedException {
-
-        authPageSteps
-                .openWhatProjectApp()
-                .fillEmailFieldWithData(Roles.ADMIN)
-                .fillPasswordFieldWithData(Roles.ADMIN)
-                .clickSignInButton(driver, MentorsTablePageSteps.class)
-                .clickForAllElements()
-                .verifyThatSortIsWorking(driver);
-
     }
 }
