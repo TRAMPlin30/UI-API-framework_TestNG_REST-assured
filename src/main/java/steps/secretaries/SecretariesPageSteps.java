@@ -1,7 +1,7 @@
 package steps.secretaries;
 
 import org.openqa.selenium.WebDriver;
-import page.secretaries.SecretariesPage;
+import pages.secretaries.SecretariesPage;
 
 
 public class SecretariesPageSteps extends SecretariesPage {

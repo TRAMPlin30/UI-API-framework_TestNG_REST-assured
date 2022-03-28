@@ -1,9 +1,9 @@
-package page.secretaries;
+package pages.secretaries;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import page.BasePage;
+import pages.BasePage;
 
 import static constants.Locators.EditSecretary.*;
 
