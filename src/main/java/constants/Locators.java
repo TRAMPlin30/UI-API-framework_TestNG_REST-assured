@@ -182,8 +182,8 @@ public class Locators {
     }
 
     public interface ListOfCourses{
-        String COURSE_CONTENT_SIDEBAR_XPATH = "//a[@data-id='5']",
-                ADD_A_COURSE_BUTTON_XPATH = "//span[@data-testid='addCourseBtnText']",
+        String COURSE_SIDEBAR_XPATH = "//a[@data-id='5']",
+                ADD_COURSE_BUTTON_XPATH = "//span[@data-testid='addCourseBtnText']",
                 EDIT_COURSE_ICON_XPATH = "",
                 DISABLED_COURSE_SWITCH_XPATH = "",
                 COURSES_TITTLE_SEARCH_FIELD_XPATH = "//input[@type='text']",
@@ -194,11 +194,11 @@ public class Locators {
     public interface CourseDetails{
         String TITTLE_BUTTON_XPATH = "//td[contains(text(),'Soft Skills for Lecturers')]",
                 ARROW_LEFT_BUTTON_XPATH = "//*[@class='bi bi-arrow-left']",
-                COURSE_DETAILS_SWITCH_XPATH = "//a[@class='nav-item nav-link tab__tab___1xEn9 tab__active___3e65x']";
+                COURSE_DETAILS_TAB_XPATH = "//a[@class='nav-item nav-link tab__tab___1xEn9 tab__active___3e65x']";
     }
 
     public interface EditCourseDetails{
-        String EDIT_COURSE_DETAILS_SWITCH_XPATH = "//a[@class='nav-item nav-link tab__tab___1xEn9']",
+        String EDIT_COURSE_DETAILS_TAB_XPATH = "//a[@class='nav-item nav-link tab__tab___1xEn9']",
                 COURSE_NAME_FIELD_XPATH = "//input[@name='name']",
                 SAVE_BUTTON_XPATH = "//button[@type='submit']",
                 RESET_BUTTON_XPATH = "//button[@type='reset']",
