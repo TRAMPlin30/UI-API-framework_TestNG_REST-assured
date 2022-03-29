@@ -121,7 +121,8 @@ public class Locators {
                 ADD_STUDENT = "//button[@class='btn button__default___3hOmG button__button___24ZfP']",
                 UPLOAD_STUDENT = "//button[@class='btn button__default___3hOmG button__button___24ZfP btn btn-warning  list-of-students__left-add-btn___3SDcH']",
                 DETAILS = "//button[@class='btn button__default___3hOmG button__button___24ZfP blocks__btnDetails___2XJNp']",
-                SWITCH_DISABLED_STUDENT = "//input[@class='custom-control-input list-of-students__custom-control-input___3BkC4']";
+                SWITCH_DISABLED_STUDENT = "//input[@class='custom-control-input list-of-students__custom-control-input___3BkC4']",
+                NEXT_PAGE = "//a[@class='page-link pagination__link___2AEaH pagination__active___3Zjzn']" ;
     }
 
     public interface StudentsDetailsTab {
