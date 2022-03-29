@@ -1,12 +1,11 @@
-package page.courses;
+package pages.courses;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import page.BasePage;
+import pages.BasePage;
 
 import static constants.Constants.COURSE_NAME;
-import static constants.Constants.courseName;
 import static constants.Locators.EditCourseDetails.*;
 
 public class EditCourseDetails extends BasePage {
@@ -30,11 +29,6 @@ public class EditCourseDetails extends BasePage {
         editCourseDetailsTab.click();
         return this;
     }
-
-//    public EditCourseDetails clearCourseNameField(){
-//        courseNameField.clear();
-//        return this;
-//    }
 
     public void fillCourseNameField(){
         fillField(courseNameField, COURSE_NAME);

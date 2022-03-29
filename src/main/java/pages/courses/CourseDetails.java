@@ -1,10 +1,10 @@
-package page.courses;
+package pages.courses;
 
 import net.jodah.failsafe.internal.util.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import page.BasePage;
+import pages.BasePage;
 
 import static constants.Locators.CourseDetails.*;
 

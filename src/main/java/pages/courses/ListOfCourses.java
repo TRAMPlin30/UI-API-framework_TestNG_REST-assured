@@ -1,13 +1,11 @@
-package page.courses;
+package pages.courses;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.testng.annotations.BeforeClass;
-import page.BasePage;
+import pages.BasePage;
 
 import static constants.Constants.COURSE_TITTLE_NAME;
-import static constants.Constants.courseTittleName;
 import static constants.Locators.ListOfCourses.*;
 
 public class ListOfCourses extends BasePage {
@@ -57,7 +55,7 @@ public class ListOfCourses extends BasePage {
     }
 
     public void fillCourseTittleSearchField(){
-        fillField(coursesTittleSearchField, COURSE_TITTLE_NAME); //constants
+        fillField(coursesTittleSearchField, COURSE_TITTLE_NAME);
     }
 
     public ListOfCourses clickRowSwitch() {
