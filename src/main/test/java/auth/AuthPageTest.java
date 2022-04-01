@@ -1,11 +1,14 @@
 package auth;
 
 import base.BaseTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import properties.Roles;
+import steps.auth.AuthPageSteps;
+import steps.myProfile.MyProfilePageSteps;
 
 public class AuthPageTest extends BaseTest {
 
+    @Parameters({"roles"})
     @Test
     public void verifyThatUserCanAuthenticate() {
 
@@ -14,11 +17,15 @@ public class AuthPageTest extends BaseTest {
                 .checkAuthUrlIslCorrectly(driver)
                 .checkAuthFormIsRendered()
                 .checkEmailFieldIsEmpty()
-                .fillEmailFieldWithData(Roles.MENTOR)
+                .fillEmailFieldWithData(user.getEmail())
                 .checkPasswordFieldIsEmpty()
-                .fillPasswordFieldWithData(Roles.MENTOR)
+                .fillPasswordFieldWithData(user.getPassword())
                 .checkThatButtonSignInIsEnabled()
                 .clickSignInButton()
-                .checkThatUserLogged(Roles.MENTOR);
+                .clickMyProfileIcon(driver, MyProfilePageSteps.class)
+                .checkThatUserLogged(user.getEmail())
+                .clickDropdownProfile()
+                .clickLogOut(driver, AuthPageSteps.class)
+                .checkAuthUrlIslCorrectly(driver);
     }
 }

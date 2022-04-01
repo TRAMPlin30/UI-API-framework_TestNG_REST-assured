@@ -1,18 +1,14 @@
 package registration;
 
-import org.openqa.selenium.WebDriver;
+import base.BaseTest;
 import org.testng.annotations.Test;
-import properties.Drivers;
-import steps.auth.AuthPageSteps;
 
-public class RegistrationPageTest {
-
-    WebDriver driver = Drivers.getDriver(Drivers.Driver.CHROMEDRIVER);
+public class RegistrationPageTest extends BaseTest {
 
     @Test
+
     public void verifyThatUserCanRegistration() {
 
-        AuthPageSteps authPageSteps = new AuthPageSteps(driver);
 
         authPageSteps
                 .openWhatProjectApp()

@@ -1,5 +1,6 @@
 package pages.auth;
 
+import lombok.Getter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,6 +9,7 @@ import pages.BasePage;
 import static constants.Constants.ELEMENT_WAIT;
 import static constants.Locators.ForgotPasswordPage.*;
 
+@Getter
 public class ForgotPasswordPage extends BasePage {
 
     @FindBy(xpath = FORGOT_PASSWORD_FORM)
@@ -23,26 +25,6 @@ public class ForgotPasswordPage extends BasePage {
     private WebElement forgotPasswordSendMessage;
     @FindBy(xpath = MESSAGE_FORGOT_PASSWORD_SEND_TEXT)
     private WebElement forgotPasswordSendText;
-
-    public WebElement getButtonSend() {
-        return buttonSend;
-    }
-
-    public WebElement getButtonBack() {
-        return buttonBack;
-    }
-
-    public WebElement getForgotPasswordSendMessage() {
-        return forgotPasswordSendMessage;
-    }
-
-    public WebElement getForgotPasswordSendText() {
-        return forgotPasswordSendText;
-    }
-
-    public WebElement getEmailAddressField() {
-        return emailAddressField;
-    }
 
     public ForgotPasswordPage(WebDriver driver) {
         super(driver);

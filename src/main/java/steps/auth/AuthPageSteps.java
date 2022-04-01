@@ -3,9 +3,9 @@ package steps.auth;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import pages.auth.AuthPage;
-import properties.Roles;
 import steps.BasePageSteps;
 import steps.registration.RegistrationPageSteps;
+
 
 import static constants.Constants.AUTH_URL;
 
@@ -40,8 +40,8 @@ public class AuthPageSteps extends BasePageSteps {
         return this;
     }
 
-    public AuthPageSteps fillEmailFieldWithData(Roles role) {
-        authPage.fillEmailField(role.getEmail());
+    public AuthPageSteps fillEmailFieldWithData(String email) {
+        authPage.fillEmailField(email);
         return this;
     }
 
@@ -53,8 +53,8 @@ public class AuthPageSteps extends BasePageSteps {
         return this;
     }
 
-    public AuthPageSteps fillPasswordFieldWithData(Roles role) {
-        authPage.fillPasswordField(role.getPassword());
+    public AuthPageSteps fillPasswordFieldWithData(String password) {
+        authPage.fillPasswordField(password);
         return this;
     }
 
@@ -73,6 +73,17 @@ public class AuthPageSteps extends BasePageSteps {
         return super.redirectToPage(driver, type);
     }
 
+    public <T> T clickMyProfileIcon(WebDriver driver, Class<T> type) {
+        authPage.clickMyProfileIcon();
+        return super.redirectToPage(driver, type);
+    }
+
+    public AuthPageSteps clickLogOut() {
+        authPage.clickLogOut();
+        return this;
+    }
+
+
     public RegistrationPageSteps clickRegistrationLink(WebDriver driver) {
         authPage.clickButtonRegistration();
         return new RegistrationPageSteps(driver);
@@ -83,8 +94,7 @@ public class AuthPageSteps extends BasePageSteps {
         return new ForgotPasswordPageSteps(driver);
     }
 
-    public AuthPageSteps checkThatUserLogged(Roles role) {
-        Assert.assertEquals(authPage.getMyProfileFullName().getAttribute("textContent"), role.getFullName());
-        return this;
-    }
+
+
+
 }
