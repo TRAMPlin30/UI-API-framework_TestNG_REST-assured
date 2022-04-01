@@ -31,8 +31,8 @@ public class ForgotPasswordPageSteps extends BasePageSteps {
         return this;
     }
 
-    public ForgotPasswordPageSteps fillEmailAddressFieldWithData() {
-        forgotPasswordPage.fillEmailAddressField("WilliamATurner@pirat.com");
+    public ForgotPasswordPageSteps fillEmailAddressFieldWithData(String email) {
+        forgotPasswordPage.fillEmailAddressField(email);
         return this;
     }
 

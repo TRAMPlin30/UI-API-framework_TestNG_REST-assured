@@ -1,5 +1,6 @@
 package pages.auth;
 
+import lombok.Getter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,8 +9,9 @@ import pages.BasePage;
 import static constants.Constants.AUTH_URL;
 import static constants.Constants.ELEMENT_WAIT;
 import static constants.Locators.AuthPage.*;
-import static constants.Locators.MyProfileItems.MY_PROFILE_FULL_NAME;
+import static constants.Locators.MyProfileItems.*;
 
+@Getter
 public class AuthPage  extends BasePage {
 
     @FindBy(xpath = LOGIN_FORM)
@@ -27,32 +29,16 @@ public class AuthPage  extends BasePage {
     @FindBy(xpath = FORGOT_PASSWORD_LINK)
     private WebElement forgotPasswordLink;
 
+    @FindBy(xpath = MY_PROFILE_ICON)
+    private WebElement myProfileIcon;
+    @FindBy(xpath = MY_PROFILE_DROPDOWN_ITEM)
+    private WebElement myProfile;
+    @FindBy(xpath = MY_PROFILE_DROPDOWN_LOG_OUT)
+    private WebElement logOut;
+
+
     public AuthPage(WebDriver driver) {
         super(driver);
-    }
-
-    public WebElement getEmailField() {
-        return emailField;
-    }
-
-    public WebElement getPasswordField() {
-        return passwordField;
-    }
-
-    public WebElement getMyProfileFullName() {
-        return myProfileFullName;
-    }
-
-    public WebElement getSignInButton() {
-        return signInButton;
-    }
-
-    public WebElement getRegistrationLink() {
-        return registrationLink;
-    }
-
-    public WebElement getForgotPasswordLink() {
-        return forgotPasswordLink;
     }
 
     public void openAuthUrlPage() {
@@ -60,7 +46,7 @@ public class AuthPage  extends BasePage {
     }
 
     public void waitLoginForm() {
-        waitWebElementVisible(loginForm, ELEMENT_WAIT);
+        super.waitWebElementVisible(loginForm, ELEMENT_WAIT);
     }
 
     public void fillEmailField(String email) {
@@ -82,5 +68,14 @@ public class AuthPage  extends BasePage {
     public void clickButtonRegistration() {
         super.clickButton(registrationLink);
     }
+
+    public void clickMyProfileIcon() {
+        super.clickButton(myProfileIcon);
+    }
+
+    public void clickLogOut() {
+        super.clickButton(logOut);
+    }
+
 
 }

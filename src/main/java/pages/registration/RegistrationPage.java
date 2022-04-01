@@ -1,5 +1,6 @@
 package pages.registration;
 
+import lombok.Getter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,6 +9,7 @@ import pages.BasePage;
 import static constants.Constants.ELEMENT_WAIT;
 import static constants.Locators.RegistrationPage.*;
 
+@Getter
 public class RegistrationPage extends BasePage {
 
     @FindBy(xpath = REGISTRATION_FORM)
@@ -34,39 +36,7 @@ public class RegistrationPage extends BasePage {
     @FindBy(xpath = MESSAGE_REGISTRATION_DONE_TEXT)
     private WebElement registrationDoneText;
 
-    public WebElement getFirstNameField() {
-        return firstNameField;
-    }
-
-    public WebElement getLastNameField() {
-        return lastNameField;
-    }
-
-    public WebElement getEmailAddressField() {
-        return emailAddressField;
-    }
-
-    public WebElement getPasswordField() {
-        return passwordField;
-    }
-
-    public WebElement getConfirmPasswordField() {
-        return confirmPasswordField;
-    }
-
-    public WebElement getRegistrationDoneMessage() {
-        return registrationDoneMessage;
-    }
-
-    public WebElement getRegistrationDoneText() {
-        return registrationDoneText;
-    }
-
-    public WebElement getButtonSignUp() {
-        return buttonSignUp;
-    }
-
-    public RegistrationPage(WebDriver driver) {
+       public RegistrationPage(WebDriver driver) {
         super(driver);
     }
 

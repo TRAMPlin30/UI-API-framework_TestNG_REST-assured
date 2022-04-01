@@ -1,17 +1,12 @@
 package auth;
 
-import org.openqa.selenium.WebDriver;
+import base.BaseTest;
 import org.testng.annotations.Test;
-import properties.Drivers;
-import steps.auth.AuthPageSteps;
 
-public class ForgotPasswordPageTest {
-
-    WebDriver driver = Drivers.getDriver(Drivers.Driver.CHROMEDRIVER);
+public class ForgotPasswordPageTest extends BaseTest {
 
     @Test
     public void verifyThatUserCanSendForgotPassword() {
-        AuthPageSteps authPageSteps = new AuthPageSteps(driver);
 
         authPageSteps
                 .openWhatProjectApp()
@@ -20,7 +15,7 @@ public class ForgotPasswordPageTest {
                 .checkForgotPasswordUrlIslCorrectly(driver)
                 .waitForgotPasswordFormIsRendered()
                 .checkEmailAddressFieldIsEmpty()
-                .fillEmailAddressFieldWithData()
+                .fillEmailAddressFieldWithData(user.getEmail())
                 .checkThatButtonSendIsEnabled()
                 .clickButtonSend()
                 .checkThatForgotPasswordSend()

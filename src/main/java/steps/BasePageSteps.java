@@ -25,7 +25,7 @@ public  class BasePageSteps extends BasePage {
                 IllegalAccessException |
                 IllegalArgumentException e) {
             e.printStackTrace();
+            return null;
         }
-        return null;
     }
 }

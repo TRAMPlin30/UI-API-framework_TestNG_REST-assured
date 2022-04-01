@@ -12,4 +12,14 @@ public class Constants {
                                REGISTRATION_URL = "http://localhost:8080/registration",
                                FORGOT_PASSWORD_URL = "http://localhost:8080/forgot-password";
 
+    public interface testDataPaths {
+         String ADMIN_DATA_JSON = "D:\\Softserve\\WHAT_TAQC_JavaDP223\\src\\main\\resources\\testData\\Admin.json",
+                 MENTOR_DATA_JSON = "D:\\Softserve\\WHAT_TAQC_JavaDP223\\src\\main\\resources\\testData\\Mentor.json",
+                 SECRETARY_DATA_JSON = "D:\\Softserve\\WHAT_TAQC_JavaDP223\\src\\main\\resources\\testData\\Secretary.json";
+
+
+
+
+    }
+
 }

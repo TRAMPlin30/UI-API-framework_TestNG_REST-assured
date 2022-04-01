@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="All Test Suite">
+<!--    <parameter name="Role" value="Admin"></parameter>-->
+<!--    <parameter name="Role" value="Mentor"></parameter>-->
+<!--    <parameter name="Role" value="Secretary"></parameter>-->
+
+    <test verbose="2" preserve-order="true" name="D:/Softserve/WHAT_TAQC_JavaDP223/src">
+<!--        <parameter name="Role" value="Admin"></parameter>-->
+        <!--    <parameter name="Role" value="Mentor"></parameter>-->
+        <!--    <parameter name="Role" value="Secretary"></parameter>-->
+        <classes>
+            <class name="auth.AuthPageAllRolesTest">
+                <methods>
+                    <include name="verify"/>
+                </methods>
+            </class>
+
+<!--            <class name="auth.AuthPageTest">-->
+<!--                <methods>-->
+<!--                    <include name="verifyThatUserCanAuthenticate"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            -->
+<!--            <class name="auth.ForgotPasswordPageTest">-->
+<!--                <methods>-->
+<!--                    <include name="verifyThatUserCanSendForgotPassword"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+        </classes>
+    </test>
+</suite>

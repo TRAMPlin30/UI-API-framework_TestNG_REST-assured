@@ -67,12 +67,10 @@ public class Locators {
     }
 
     public interface MyProfileItems {
-        String  MY_PROFILE_ICON = "//*[@href='/my-profile']",
+        String  MY_PROFILE_ICON = "//div[@class='header__header__account-user___2Pe1D']/a[@href='/my-profile']",
                 MY_PROFILE_FULL_NAME = "//span[@class='header__header__account-user--fullname___2kSON']",
-                MY_PROFILE_DROPDOWN_ITEMS_LIST = "//span[@class='header__header__dropdown-icon-active___1asoM']",
-                MY_PROFILE_DROPDOWN_ITEM_MY_PROFILE = "//a[contains(text(),'My profile')]",
-                MY_PROFILE_DROPDOWN_ITEM_CHANGE_PASSWORD = "//a[contains(text(),'Change password')]",
-                MY_PROFILE_DROPDOWN_ITEM_LOG_OUT = "//a[contains(text(),'Log Out')]";
+                MY_PROFILE_DROPDOWN_ITEM = "//span[@class='header__header__dropdown-icon___1CTJ8']",
+                MY_PROFILE_DROPDOWN_LOG_OUT = "//a[contains(text(),'Log Out')]";
     }
 
     public interface MyProfilePage {
@@ -80,6 +78,7 @@ public class Locators {
                 FIRST_NAME_FIELD = "//div[text()='First Name:']",
                 LAST_NAME_FIELD = "//div[text()='Last Name:']",
                 EMAIL_FIELD = "//div[text()='Email address:']",
+                EMAIL_ADDRESS = "//div[@class='row mt-3'][3]/div[@class='col-sm-8']", // Added by Trubachov
                 USER_DATA = "//div[@class='col-sm-8']",
                 CHANGE_PASSWORD_BUTTON = "//button[text()='Change password']";
     }
