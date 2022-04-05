@@ -13,9 +13,12 @@ public class Constants {
                                FORGOT_PASSWORD_URL = "http://localhost:8080/forgot-password";
 
     public interface testDataPaths {
-         String ADMIN_DATA_JSON = "D:\\Softserve\\WHAT_TAQC_JavaDP223\\src\\main\\resources\\testData\\Admin.json",
+         String dir = System.getProperty("basedir");
+         String ADMIN_DATA_JSON = dir + "\\src\\main\\resources\\testData\\Admin.json",
                  MENTOR_DATA_JSON = "D:\\Softserve\\WHAT_TAQC_JavaDP223\\src\\main\\resources\\testData\\Mentor.json",
-                 SECRETARY_DATA_JSON = "D:\\Softserve\\WHAT_TAQC_JavaDP223\\src\\main\\resources\\testData\\Secretary.json";
+                 SECRETARY_DATA_JSON = "D:\\Softserve\\WHAT_TAQC_JavaDP223\\src\\main\\resources\\testData\\Secretary.json",
+                 STUDENT_DATA_JSON = "D:\\Softserve\\WHAT_TAQC_JavaDP223\\src\\main\\resources\\testData\\Student.json",
+                 CREATED_USERS_DATA_JSON = "D:\\Softserve\\WHAT_TAQC_JavaDP223\\src\\main\\resources\\testData\\CreatedUser.json";
 
 
 

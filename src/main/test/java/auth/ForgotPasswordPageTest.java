@@ -18,7 +18,7 @@ public class ForgotPasswordPageTest extends BaseTest {
                 .fillEmailAddressFieldWithData(user.getEmail())
                 .checkThatButtonSendIsEnabled()
                 .clickButtonSend()
-                .checkThatForgotPasswordSend()
+                .checkMessageForgotPasswordSent()
                 .checkThatButtonBackIsEnabled()
                 .clickButtonBack();
     }

@@ -108,7 +108,10 @@ public class Locators {
                 TABLE_HEAD_EMAIL = "//span[contains(text(),'Email')]",
                 TABLE_HEAD_CHOOSE_ROLE = "//th[text()='Choose role']",
                 ADD_ROLE_BUTTON = "//button[text()='Add role']",
-                ROWS_FIELD = "//span[contains(text(),'Rows')]";
+                ROWS_FIELD = "//span[contains(text(),'Rows')]",
+                ROWS_TABLE = "//tbody[@class='table__table-body___bYZbU']",
+                SUCCESS_MESSAGE = "//div[@class='fade alert alert-success alert-dismissible show']";
+       
     }
 
     public interface StudentsPage {

@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import steps.auth.AuthPageSteps;
 import steps.myProfile.MyProfilePageSteps;
 
-public class AuthPageTest extends BaseTest {
+public class ValidDataAuthPageOneRoleTest extends BaseTest {
 
     @Parameters({"roles"})
     @Test
@@ -23,7 +23,7 @@ public class AuthPageTest extends BaseTest {
                 .checkThatButtonSignInIsEnabled()
                 .clickSignInButton()
                 .clickMyProfileIcon(driver, MyProfilePageSteps.class)
-                .checkThatUserLogged(user.getEmail())
+                .checkThatUserLoggedByEmail(user.getEmail())
                 .clickDropdownProfile()
                 .clickLogOut(driver, AuthPageSteps.class)
                 .checkAuthUrlIslCorrectly(driver);

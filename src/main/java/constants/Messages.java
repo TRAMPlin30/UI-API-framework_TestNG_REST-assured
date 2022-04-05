@@ -23,6 +23,7 @@ public class Messages {
         String MESSAGE_DONE_REGISTRATION = "Congratulations",
                MESSAGE_DONE_REGISTRATION_TEXT = "You have successfully registered. Please, wait until your account is approved and your role is assigned.",
                MESSAGE_DONE_FORGOT_PASSWORD = "Forgot password information",
-                MESSAGE_DONE_FORGOT_PASSWORD_TEXT = "Please check your email and follow the link to reset your password.";
+                MESSAGE_DONE_FORGOT_PASSWORD_TEXT = "Please check your email and follow the link to reset your password.",
+                MESSAGE_DONE_ASSIGNED = "×\n" + "Close alert\n" + "The user has been successfully assigned as a mentor";
     }
 }

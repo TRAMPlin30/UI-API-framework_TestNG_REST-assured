@@ -12,7 +12,7 @@ public class BaseTest {
     protected User user;
 
     @Parameters({"Role"})
-    @BeforeClass
+    @BeforeSuite
     public void setUp(String role) {
         driver = Drivers.getDriver(Drivers.Driver.CHROMEDRIVER);
         user = User.createUser(role);

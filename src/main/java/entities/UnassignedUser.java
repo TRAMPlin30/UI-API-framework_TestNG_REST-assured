@@ -1,5 +1,6 @@
 package entities;
 
+
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Data;
@@ -11,44 +12,33 @@ import static constants.Constants.testDataPaths.*;
 
 @Data
 @JsonAutoDetect
-public class User {
+public class UnassignedUser {
 
-    private String email;
     private String password;
-    private String first_name;
-    private String last_name;
-    private int role;
-    private int id;
+    private String name;
+    private String sureName;
+    private String email;
 
-    public User() {}
+    public UnassignedUser() {}
 
-    public static User createUser(String role) {
+    public static UnassignedUser createUser(String role) {
         String jsonPath = null;
         switch (role) {
-            case "Admin":
-                jsonPath = ADMIN_DATA_JSON;
-                break;
-            case "Mentor":
-                jsonPath = MENTOR_DATA_JSON;
-                break;
-            case "Secretary":
-                jsonPath = SECRETARY_DATA_JSON;
-                break;
-            case "Student":
-                jsonPath = STUDENT_DATA_JSON;
-                break;
             case  "Unassigned":
                 jsonPath = CREATED_USERS_DATA_JSON;
                 break;
         }
         ObjectMapper objectMapper = new ObjectMapper();
-        User user = null;
+        UnassignedUser user = null;
         try {
             String jsonString = JsonReader.getJsonFile(jsonPath);
-            user = objectMapper.readValue(jsonString, User.class);
+            user = objectMapper.readValue(jsonString, UnassignedUser.class);
         } catch (IOException e) {
             e.printStackTrace();
         }
         return user;
     }
 }
+
+
+
