@@ -73,9 +73,9 @@ public class AuthPage  extends BasePage {
         super.clickButton(myProfileIcon);
     }
 
-    public void clickLogOut() {
-        super.clickButton(logOut);
-    }
+//    public void clickLogOut() {
+//        super.clickButton(logOut);
+//    }
 
 
 }

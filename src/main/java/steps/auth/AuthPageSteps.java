@@ -68,6 +68,8 @@ public class AuthPageSteps extends BasePageSteps {
         return this;
     }
 
+
+
     public <T> T clickSignInButton(WebDriver driver, Class<T> type) {
         authPage.clickButtonSignIN();
         return super.redirectToPage(driver, type);
@@ -78,10 +80,10 @@ public class AuthPageSteps extends BasePageSteps {
         return super.redirectToPage(driver, type);
     }
 
-    public AuthPageSteps clickLogOut() {
-        authPage.clickLogOut();
-        return this;
-    }
+//    public AuthPageSteps clickLogOut() {
+//        authPage.clickLogOut();
+//        return this;
+//    }
 
 
     public RegistrationPageSteps clickRegistrationLink(WebDriver driver) {

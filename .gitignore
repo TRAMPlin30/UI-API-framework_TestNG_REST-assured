@@ -1,7 +1,8 @@
-# Compiled class file
+.idea
+testng.xml
 *.class
 /target
-/.idea
+
 # Log file
 *.log
 

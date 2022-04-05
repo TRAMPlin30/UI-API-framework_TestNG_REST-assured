@@ -10,14 +10,14 @@ import steps.myProfile.MyProfilePageSteps;
 import java.util.Arrays;
 import java.util.List;
 
-public class AuthPageAllRolesTest {
+public class ValidDataAuthPageAllRolesTest {
 
     @Test
-    public void verify() {
+    public void verifyAllRolesCanLogin() {
 
         WebDriver driver = Drivers.getDriver(Drivers.Driver.CHROMEDRIVER);
         AuthPageSteps authPageSteps = new AuthPageSteps(driver);
-        List<String> roles = Arrays.asList("Admin", "Mentor", "Secretary");
+        List<String> roles = Arrays.asList("Admin", "Mentor", "Secretary", "Student");
 
         roles.stream().map(User::createUser).forEach(user1 -> authPageSteps
 
@@ -31,7 +31,7 @@ public class AuthPageAllRolesTest {
                 .checkThatButtonSignInIsEnabled()
                 .clickSignInButton()
                 .clickMyProfileIcon(driver, MyProfilePageSteps.class)
-                .checkThatUserLogged(user1.getEmail())
+                .checkThatUserLoggedByEmail(user1.getEmail())
                 .clickDropdownProfile()
                 .clickLogOut(driver, AuthPageSteps.class)
                 .checkAuthUrlIslCorrectly(driver));

@@ -36,8 +36,8 @@ public class RegistrationPageSteps extends BasePageSteps {
         return this;
     }
 
-    public RegistrationPageSteps fillFirstNameFieldWithData() {
-        registrationPage.fillFieldFirstName("WilliamA");
+    public RegistrationPageSteps fillFirstNameField(String firstName) {
+        registrationPage.fillFieldFirstName(firstName);
         return this;
     }
 
@@ -49,8 +49,8 @@ public class RegistrationPageSteps extends BasePageSteps {
         return this;
     }
 
-    public RegistrationPageSteps fillLastNameFieldWithData() {
-        registrationPage.fillFieldLastName("TurnerA");
+    public RegistrationPageSteps fillLastNameField(String lastName) {
+        registrationPage.fillFieldLastName(lastName);
         return this;
     }
 
@@ -62,8 +62,8 @@ public class RegistrationPageSteps extends BasePageSteps {
         return this;
     }
 
-    public RegistrationPageSteps fillEmailAddressFieldWithData() {
-        registrationPage.fillEmailAddress("WilliamATurner@pirat.com");
+    public RegistrationPageSteps fillEmailAddressFieldWithData(String emailAddress) {
+        registrationPage.fillEmailAddress(emailAddress);
         return this;
     }
 
@@ -75,8 +75,8 @@ public class RegistrationPageSteps extends BasePageSteps {
         return this;
     }
 
-    public RegistrationPageSteps fillPasswordFieldFieldWithData() {
-        registrationPage.fillPassword("Qw12345678+");
+    public RegistrationPageSteps fillPasswordFieldFieldWithData(String password) {
+        registrationPage.fillPassword(password);
         return this;
     }
 
@@ -88,8 +88,8 @@ public class RegistrationPageSteps extends BasePageSteps {
         return this;
     }
 
-    public RegistrationPageSteps fillConfirmPasswordFieldFieldWithData() {
-        registrationPage.fillConfirmPassword("Qw12345678+");
+    public RegistrationPageSteps fillConfirmPasswordFieldFieldWithData(String confPassword) {
+        registrationPage.fillConfirmPassword(confPassword);
         return this;
     }
 

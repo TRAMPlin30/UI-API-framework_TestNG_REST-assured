@@ -5,6 +5,8 @@ import org.testng.Assert;
 import pages.myProfile.MyProfilePage;
 import steps.BasePageSteps;
 
+import static constants.Constants.ELEMENT_WAIT;
+
 public class MyProfilePageSteps extends BasePageSteps {
 
     MyProfilePage myProfilePage;
@@ -14,12 +16,13 @@ public class MyProfilePageSteps extends BasePageSteps {
         myProfilePage = new MyProfilePage(driver);
     }
 
-    public MyProfilePageSteps checkThatUserLogged(String email) {
+    public MyProfilePageSteps checkThatUserLoggedByEmail(String email) {
         Assert.assertEquals(myProfilePage.getEmailAddress().getAttribute("textContent"), email);
         return this;
     } // Added by Trubachov
 
     public MyProfilePageSteps clickDropdownProfile() {
+        super.waitWebElementVisible(myProfilePage.getMyProfileDropDown(), ELEMENT_WAIT);
         myProfilePage.clickDropdownProfile();
         return this;
     } // Added by Trubachov

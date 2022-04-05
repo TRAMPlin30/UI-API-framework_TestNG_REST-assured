@@ -46,7 +46,7 @@ public class ForgotPasswordPageSteps extends BasePageSteps {
         return this;
     }
 
-    public ForgotPasswordPageSteps checkThatForgotPasswordSend() {
+    public ForgotPasswordPageSteps checkMessageForgotPasswordSent() {
         Assert.assertEquals(forgotPasswordPage.getForgotPasswordSendMessage().getAttribute("textContent"), MESSAGE_DONE_FORGOT_PASSWORD);
         Assert.assertEquals(forgotPasswordPage.getForgotPasswordSendText().getAttribute("textContent"), MESSAGE_DONE_FORGOT_PASSWORD_TEXT);
         return this;
