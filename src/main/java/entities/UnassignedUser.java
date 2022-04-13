@@ -1,6 +1,5 @@
 package entities;
 
-
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Data;
@@ -8,15 +7,15 @@ import properties.JsonReader;
 
 import java.io.IOException;
 
-import static constants.Constants.testDataPaths.*;
+import static constants.Constants.testDataPathsMyProfile.*;
 
 @Data
 @JsonAutoDetect
 public class UnassignedUser {
 
     private String password;
-    private String name;
-    private String sureName;
+    private String firstName;
+    private String lastName;
     private String email;
 
     public UnassignedUser() {}

@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-import static constants.Constants.IMPLISITLY_WAIT;
+import static constants.Constants.IMPLICITLY_WAIT;
 
 public class BasePage {
 
@@ -21,7 +21,7 @@ public class BasePage {
 
     public void openURL(String url) {
         driver.get(url);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLISITLY_WAIT));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLICITLY_WAIT));
     }
 
     public void waitWebElementVisible(WebElement element, int time) {
@@ -33,8 +33,8 @@ public class BasePage {
         }
     }
 
-    public void fillField (WebElement field, String value) {
-        if (field.getAttribute("disabled")== null
+    public void fillField(WebElement field, String value) {
+        if (field.getAttribute("disabled") == null
                 || field.getAttribute("readOnly") == null) {
             field.click();
             field.clear();
@@ -44,15 +44,12 @@ public class BasePage {
         }
     }
 
-    public void clickButton (WebElement button) {
+    public void clickButton(WebElement button) {
         if (button.isEnabled()) {
             button.click();
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLISITLY_WAIT));
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLICITLY_WAIT));
         } else {
             System.out.println("Button: " + button + " is not active!!!");
         }
-
-
     }
-
 }

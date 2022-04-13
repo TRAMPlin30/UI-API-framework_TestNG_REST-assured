@@ -1,9 +1,8 @@
-
-  {
-    "email": "mary.lewis@example.com",
-    "password": "0XyCwz_U",
-    "first_name": "Mary",
-    "last_name": "Lewis",
-    "role": 4,
-    "id": 21
-  }
+{
+  "email": "mary.lewis@example.com",
+  "password": "0XyCwz_U",
+  "firstName": "Mary",
+  "lastName": "Lewis",
+  "role": 4,
+  "id": 21
+}

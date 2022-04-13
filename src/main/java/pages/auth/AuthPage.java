@@ -12,7 +12,7 @@ import static constants.Locators.AuthPage.*;
 import static constants.Locators.MyProfileItems.*;
 
 @Getter
-public class AuthPage  extends BasePage {
+public class AuthPage extends BasePage {
 
     @FindBy(xpath = LOGIN_FORM)
     private WebElement loginForm;
@@ -28,6 +28,10 @@ public class AuthPage  extends BasePage {
     private WebElement registrationLink;
     @FindBy(xpath = FORGOT_PASSWORD_LINK)
     private WebElement forgotPasswordLink;
+
+    @FindBy(xpath = MESSAGE_ALERT_EMAIL_FIELD)
+    private WebElement messageAlertEmail;
+
 
     @FindBy(xpath = MY_PROFILE_ICON)
     private WebElement myProfileIcon;
@@ -72,10 +76,4 @@ public class AuthPage  extends BasePage {
     public void clickMyProfileIcon() {
         super.clickButton(myProfileIcon);
     }
-
-//    public void clickLogOut() {
-//        super.clickButton(logOut);
-//    }
-
-
 }

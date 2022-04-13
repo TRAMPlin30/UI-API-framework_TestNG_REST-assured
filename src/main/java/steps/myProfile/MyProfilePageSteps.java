@@ -5,8 +5,6 @@ import org.testng.Assert;
 import pages.myProfile.MyProfilePage;
 import steps.BasePageSteps;
 
-import static constants.Constants.ELEMENT_WAIT;
-
 public class MyProfilePageSteps extends BasePageSteps {
 
     MyProfilePage myProfilePage;
@@ -16,21 +14,38 @@ public class MyProfilePageSteps extends BasePageSteps {
         myProfilePage = new MyProfilePage(driver);
     }
 
-    public MyProfilePageSteps checkThatUserLoggedByEmail(String email) {
-        Assert.assertEquals(myProfilePage.getEmailAddress().getAttribute("textContent"), email);
+    public MyProfilePageSteps verifyEmailAddressFieldIsDisplayedCorrectly(String email) {
+        Assert.assertEquals(myProfilePage.getEmailAddressFieldContent(), email);
         return this;
-    } // Added by Trubachov
+    }
 
-    public MyProfilePageSteps clickDropdownProfile() {
-        super.waitWebElementVisible(myProfilePage.getMyProfileDropDown(), ELEMENT_WAIT);
+    public MyProfilePageSteps verifyFirstNameFieldIsDisplayedCorrectly(String firstName) {
+        Assert.assertEquals(myProfilePage.getFirstNameFieldContent(), firstName);
+        return this;
+    }
+
+    public MyProfilePageSteps verifyLastNameFieldIsDisplayedCorrectly(String lastName) {
+        Assert.assertEquals(myProfilePage.getLastNameFieldContent(), lastName);
+        return this;
+    }
+
+    public ChangePasswordPageSteps clickChangePasswordButton(WebDriver driver) {
+        myProfilePage.clickChangePasswordButton();
+        return new ChangePasswordPageSteps(driver);
+    }
+
+    public MyProfilePageSteps clickDropdownMenu() {
         myProfilePage.clickDropdownProfile();
         return this;
-    } // Added by Trubachov
+    }
 
     public <T> T clickLogOut(WebDriver driver, Class<T> type) {
         myProfilePage.clickLogOut();
         return super.redirectToPage(driver, type);
-    } // Added by Trubachov
+    }
 
-
+    public MyProfilePageSteps checkThatUserLoggedByEmail(String email) {
+        Assert.assertEquals(myProfilePage.getEmailAddressFieldContent(), email);
+        return this;
+    }
 }

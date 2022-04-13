@@ -1,12 +1,13 @@
 package pages.secretaries;
 
+import lombok.Getter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages.BasePage;
-
 import static constants.Locators.EditSecretary.*;
 
+@Getter
 public class EditSecretaryPage extends BasePage {
 
     @FindBy(xpath = SECRETARY_DETAILS_ARROW_BUTTON)
@@ -27,43 +28,51 @@ public class EditSecretaryPage extends BasePage {
     protected WebElement saveButton;
     @FindBy(xpath = SECRETARY_DETAILS_TITLE)
     protected WebElement secretariesDetailsTitle;
+    @FindBy(xpath = MESSAGE_DONE_EDIT_SECRETARIES_TEXT)
+    protected WebElement messageSave;
+    @FindBy(xpath = CONFIRM_ACTION)
+    protected WebElement confirmActionForm;
+    @FindBy(xpath = CANCEL_BUTTON)
+    protected WebElement cancelButton;
+    @FindBy(xpath = LAY_OFF_BUTTON)
+    protected WebElement layOffButtonForm;
 
     public EditSecretaryPage(WebDriver driver) {
         super(driver);
     }
 
+    public void clickArrowButton() {
+        super.clickButton(arrowButton);
+    }
+    public void clickLayOffButtonForm() {
+        super.clickButton(layOffButtonForm);
+    }
+
+    public void clickCancelButton() {
+        super.clickButton(cancelButton);
+    }
+    public void clickLayOffButton() {
+        super.clickButton(layOffButton);
+    }
+    public void clickResetButton() {
+        super.clickButton(resetButton);
+    }
+    public void fillFieldFirstName(String value) {
+
+        super.fillField(firstNameInput, value);
+    }
+
+    public void fillFieldLastName(String value) {
+        super.fillField(lastNameInput, value);
+    }
+
     public void openSecretaryDetailsTab() {
         super.clickButton(editSecretaryTab);
     }
-    public void returnToSecretariesPage() {
-        super.clickButton(arrowButton);
-    }
-    public void EditNameSecretary (String name) {
-
-        super.fillField(firstNameInput, name);
-    }
-    public void EditSurnameSecretary (String surname) {
-
-        super.fillField(lastNameInput, surname);
-    }
-    public void EditEmailSecretary(String email) {
-
-        super.fillField(emailInput, email);
-    }
-    public void clicksaveButton() {
-
+    public void clickSaveButton() {
         super.clickButton(saveButton);
     }
-    public void clicklayOfButton() {
-
-        super.clickButton(layOffButton);
-    }
-    public void clickresetButton() {
-
-        super.clickButton(resetButton);
-    }
-    public void clickSecretariesDetailsTitle(){
-
+    public void clickSecretariesDetailsTitle() {
         super.clickButton(secretariesDetailsTitle);
     }
 }

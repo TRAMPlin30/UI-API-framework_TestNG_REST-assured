@@ -5,9 +5,7 @@ import pages.BasePage;
 
 import java.lang.reflect.InvocationTargetException;
 
-
-public  class BasePageSteps extends BasePage {
-
+public class BasePageSteps extends BasePage {
     WebDriver driver;
 
     public BasePageSteps(WebDriver driver) {

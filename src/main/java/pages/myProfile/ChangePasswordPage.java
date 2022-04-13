@@ -1,12 +1,18 @@
 package pages.myProfile;
 
+import lombok.Getter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pages.BasePage;
 
-import static constants.Locators.ChangePasswordPage.*;
+import java.util.List;
 
+import static constants.Locators.ChangePasswordPage.*;
+import static constants.Locators.MyProfileItems.MY_PROFILE_DROPDOWN_ITEM;
+import static constants.Locators.MyProfileItems.MY_PROFILE_DROPDOWN_LOG_OUT;
+
+@Getter
 public class ChangePasswordPage extends BasePage {
     @FindBy(xpath = CHANGE_PASSWORD_HEADER)
     private WebElement changePasswordHeader;
@@ -47,55 +53,60 @@ public class ChangePasswordPage extends BasePage {
     @FindBy(xpath = SAVE_BUTTON)
     private WebElement saveButton;
 
+    @FindBy(xpath = CONFIRM_BUTTON)
+    private WebElement confirmButton;
+
     @FindBy(xpath = CANCEL_BUTTON)
     private WebElement cancelButton;
+
+    @FindBy(xpath = CANCEL_ITEM)
+    private WebElement cancelItem;
+
+    @FindBy(xpath = MY_PROFILE_DROPDOWN_ITEM)
+    private WebElement myProfileDropdownItem;
+
+    @FindBy(xpath = MY_PROFILE_DROPDOWN_LOG_OUT)
+    private WebElement logOut;
+
+    @FindBy(xpath = ERROR_MESSAGES)
+    private List<WebElement> errorMessages;
+
+    @FindBy(xpath = NEW_PASS_NOT_VALID_DATA)
+    private WebElement newPassNotValidData;
+
+    @FindBy(xpath = CONFIRM_NEW_PASS_NOT_VALID_DATA)
+    private WebElement confirmNewPassNotValidData;
 
     public ChangePasswordPage(WebDriver driver) {
         super(driver);
     }
 
-    public String getLabel() {
-        return changePasswordHeader.getText();
-    }
-
-    public boolean verifyEmailAddressField() {
-        return emailAddressField.isDisplayed();
-    }
-
-    public boolean currentPasswordField() {
-        return currentPasswordField.isDisplayed();
-    }
-
-    public boolean newPasswordField() {
-        return newPasswordField.isDisplayed();
-    }
-
-    public boolean confirmPasswordField() {
-        return confirmPasswordField.isDisplayed();
-    }
-
-    public boolean verifyEmailAddressFieldIsDisplayed() {
-        return emailData.isDisplayed();
-    }
-
-    public boolean verifyEmailAddressFieldIsDisable() {
-        return !emailData.isEnabled();
-    }
-
-    public boolean emailAddressIsDisplayedCorrectly(String email) {
-        return emailData.getAttribute("value").equals(email);
+    public void clickDropdownProfile() {
+        super.clickButton(myProfileDropdownItem);
     }
 
     public boolean currentPasswordFieldIsEmpty() {
-        return currentPasswordField.getText().isEmpty();
+        return currentPasswordInputField.getText().isEmpty();
     }
 
     public boolean newPasswordFieldIsEmpty() {
-        return newPasswordField.getText().isEmpty();
+        return newPasswordInputField.getText().isEmpty();
     }
 
     public boolean confirmPasswordFieldIsEmpty() {
-        return confirmPasswordField.getText().isEmpty();
+        return confirmPasswordInputField.getText().isEmpty();
+    }
+
+    public String getCurrentPasswordErrorMessage() {
+        return errorMessages.get(0).getText();
+    }
+
+    public String getNewPasswordErrorMessage() {
+        return errorMessages.get(1).getText();
+    }
+
+    public String getConfirmNewPasswordErrorMessage() {
+        return errorMessages.get(2).getText();
     }
 
     public void fillCurrentPasswordField(String currentPassword) {
@@ -110,32 +121,35 @@ public class ChangePasswordPage extends BasePage {
         fillField(confirmPasswordInputField, confirmNewPassword);
     }
 
-    public boolean verifySaveButtonIsDisable() {
-        return !saveButton.isEnabled();
+    public void clickSaveButton(){
+        super.clickButton(saveButton);
     }
 
-    public void clickOnCurrentPasswordField() {
-        currentPasswordInputField.click();
+    public void clickCancelButton(){
+        super.clickButton(cancelButton);
     }
 
-    public void clickOnNewPasswordField() {
-        newPasswordInputField.click();
+    public void clickCancelItem(){
+        super.clickButton(cancelItem);
     }
 
-    public void clickOnConfirmNewPasswordField() {
-        confirmPasswordInputField.click();
+    public void clickConfirmButton(){
+        super.clickButton(confirmButton);
     }
 
-    public boolean verifySaveButtonIsEnabled() {
-        return saveButton.isEnabled();
+    public void clickLogOut() {
+        super.clickButton(logOut);
     }
 
-    public boolean verifyCancelButtonIsEnabled() {
-        return cancelButton.isEnabled();
+    public void clickCurrentPasswordInputField(){
+        super.clickButton(currentPasswordInputField);
     }
 
-    public MyProfilePage verifyCancelButton() {
-        cancelButton.click();
-        return new MyProfilePage(driver);
+    public void clickNewPasswordInputField(){
+        super.clickButton(newPasswordInputField);
+    }
+
+    public void clickConfirmNewPasswordInputField(){
+        super.clickButton(confirmPasswordInputField);
     }
 }
