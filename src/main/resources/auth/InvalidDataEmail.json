@@ -1,0 +1,32 @@
+[
+  {
+    "firstNameValue": null,
+    "firstNameError": null,
+    "lastNameValue": null,
+    "lastNameError": null,
+    "emailValue": "example@",
+    "emailError": "'Email' is not a valid email address.",
+    "passwordValue": null,
+    "passwordError": null
+  },
+  {
+    "firstNameValue": null,
+    "firstNameError": null,
+    "lastNameValue": null,
+    "lastNameError": null,
+    "emailValue": "@example.com",
+    "emailError": "'Email' is not a valid email address.",
+    "passwordValue": null,
+    "passwordError": null
+  },
+  {
+    "firstNameValue": null,
+    "firstNameError": null,
+    "lastNameValue": null,
+    "lastNameError": null,
+    "emailValue": "q",
+    "emailError": "'Email' is not a valid email address.",
+    "passwordValue": null,
+    "passwordError": null
+  }
+]

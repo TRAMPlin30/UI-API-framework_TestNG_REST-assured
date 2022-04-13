@@ -18,20 +18,21 @@ public class UnassignedUsersPage extends BasePage {
 
     @FindBy(xpath = SIDEBAR_ITEM_UNASSIGNED)
     public WebElement sideBarUnassigned;
+
     @FindBy(xpath = DROPDOWN_ROWS)
     public WebElement dropDownList;
+
     @FindBy(xpath = DROPDOWN_ROWS_ITEM_99)
     public WebElement dropDownItem99;
-    @FindBy(xpath=SUCCESS_MESSAGE)
+
+    @FindBy(xpath = SUCCESS_MESSAGE)
     @CacheLookup
     public WebElement messageSuccessfully;
-
 
     String chooseRoleStudent;
     String chooseRoleMentor;
     String chooseRoleSecretary;
     String rowButtonLocation;
-
 
     public UnassignedUsersPage(WebDriver driver) {
         super(driver);
@@ -55,7 +56,7 @@ public class UnassignedUsersPage extends BasePage {
     public void chooseRoleStudent(WebDriver driver, String email) {
         String xpathTo = String.format(chooseRoleStudent, email);
         WebElement student = driver.findElement(By.xpath(xpathTo));
-       clickButton(student);
+        clickButton(student);
     }
 
     public void chooseRoleMentor(WebDriver driver, String email) {
@@ -75,11 +76,4 @@ public class UnassignedUsersPage extends BasePage {
         WebElement addRoleButton = driver.findElement(By.xpath(xpathTo));
         clickButton(addRoleButton);
     }
-
-
-
-
-
-
-
 }
