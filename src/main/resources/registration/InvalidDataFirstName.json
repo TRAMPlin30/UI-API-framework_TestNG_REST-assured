@@ -1,0 +1,82 @@
+[
+  {
+    "firstNameValue": "",
+    "firstNameError": "This field is required",
+    "lastNameValue": null,
+    "lastNameError": null,
+    "emailValue": null,
+    "emailError": null,
+    "passwordValue": null,
+    "passwordError": null
+  },
+  {
+    "firstNameValue": "f",
+    "firstNameError": "Too short",
+    "lastNameValue": null,
+    "lastNameError": null,
+    "emailValue": null,
+    "emailError": null,
+    "passwordValue": null,
+    "passwordError": null
+  },
+  {
+    "firstNameValue": "ffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "firstNameError": "Too long",
+    "lastNameValue": null,
+    "lastNameError": null,
+    "emailValue": null,
+    "emailError": null,
+    "passwordValue": null,
+    "passwordError": null
+  },
+  {
+    "firstNameValue": "name ",
+    "firstNameError": "Invalid first name",
+    "lastNameValue": null,
+    "lastNameError": null,
+    "emailValue": null,
+    "emailError": null,
+    "passwordValue": null,
+    "passwordError": null
+  },
+  {
+    "firstNameValue": " name",
+    "firstNameError": "Invalid first name",
+    "lastNameValue": null,
+    "lastNameError": null,
+    "emailValue": null,
+    "emailError": null,
+    "passwordValue": null,
+    "passwordError": null
+  },
+  {
+    "firstNameValue": "-name",
+    "firstNameError": "Invalid first name",
+    "lastNameValue": null,
+    "lastNameError": null,
+    "emailValue": null,
+    "emailError": null,
+    "passwordValue": null,
+    "passwordError": null
+  },
+  {
+    "firstNameValue": "name-",
+    "firstNameError": "Invalid first name",
+    "lastNameValue": null,
+    "lastNameError": null,
+    "emailValue": null,
+    "emailError": null,
+    "passwordValue": null,
+    "passwordError": null
+  },
+  {
+    "firstNameValue": "name!@#$%^&*()_+=",
+    "firstNameError": "Invalid first name",
+    "lastNameValue": null,
+    "lastNameError": null,
+    "emailValue": null,
+    "emailError": null,
+    "passwordValue": null,
+    "passwordError": null
+  }
+]

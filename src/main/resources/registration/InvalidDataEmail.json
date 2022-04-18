@@ -1,0 +1,42 @@
+[
+  {
+    "firstNameValue": null,
+    "firstNameError": null,
+    "lastNameValue": null,
+    "lastNameError": null,
+    "emailValue": "",
+    "emailError": "This field is required",
+    "passwordValue": null,
+    "passwordError": null
+  },
+  {
+    "firstNameValue": null,
+    "firstNameError": null,
+    "lastNameValue": null,
+    "lastNameError": null,
+    "emailValue": "example@",
+    "emailError": "Invalid email address",
+    "passwordValue": null,
+    "passwordError": null
+  },
+  {
+    "firstNameValue": null,
+    "firstNameError": null,
+    "lastNameValue": null,
+    "lastNameError": null,
+    "emailValue": "@example.com",
+    "emailError": "Invalid email address",
+    "passwordValue": null,
+    "passwordError": null
+  },
+  {
+    "firstNameValue": null,
+    "firstNameError": null,
+    "lastNameValue": null,
+    "lastNameError": null,
+    "emailValue": "пример@example.com",
+    "emailError": "Invalid email address",
+    "passwordValue": null,
+    "passwordError": null
+  }
+]

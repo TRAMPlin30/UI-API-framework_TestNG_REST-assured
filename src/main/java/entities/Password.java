@@ -7,7 +7,7 @@ import lombok.Data;
 import java.io.File;
 import java.io.IOException;
 
-import static constants.Constants.testDataPathsMyProfile.PASSWORD;
+import static constants.Constants.testDataPaths.PASSWORD;
 
 @Data
 @JsonAutoDetect

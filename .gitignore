@@ -1,5 +1,5 @@
 .idea
-testng.xml
+src/main/java/testUi/testng.xml
 *.class
 /target
 

@@ -7,7 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
-import static constants.Constants.testDataPathsMyProfile.CREATED_USERS_DATA_JSON;
+import static constants.Constants.testDataPaths.*;
 import static net.andreinc.mockneat.unit.user.Emails.emails;
 import static net.andreinc.mockneat.unit.user.Names.names;
 

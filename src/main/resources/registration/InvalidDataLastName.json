@@ -1,0 +1,82 @@
+[
+  {
+    "firstNameValue": null,
+    "firstNameError": null,
+    "lastNameValue": "",
+    "lastNameError": "This field is required",
+    "emailValue": null,
+    "emailError": null,
+    "passwordValue": null,
+    "passwordError": null
+  },
+  {
+    "firstNameValue": null,
+    "firstNameError": null,
+    "lastNameValue": "f",
+    "lastNameError": "Too short",
+    "emailValue": null,
+    "emailError": null,
+    "passwordValue": null,
+    "passwordError": null
+  },
+  {
+    "firstNameValue": null,
+    "firstNameError": null,
+    "lastNameValue": "ffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "lastNameError": "Too long",
+    "emailValue": null,
+    "emailError": null,
+    "passwordValue": null,
+    "passwordError": null
+  },
+  {
+    "firstNameValue": null,
+    "firstNameError": null,
+    "lastNameValue": "name ",
+    "lastNameError": "Invalid last name",
+    "emailValue": null,
+    "emailError": null,
+    "passwordValue": null,
+    "passwordError": null
+  },
+  {
+    "firstNameValue": null,
+    "firstNameError": null,
+    "lastNameValue": " name",
+    "lastNameError": "Invalid last name",
+    "emailValue": null,
+    "emailError": null,
+    "passwordValue": null,
+    "passwordError": null
+  },
+  {
+    "firstNameValue": null,
+    "firstNameError": null,
+    "lastNameValue": "-name",
+    "lastNameError": "Invalid last name",
+    "emailValue": null,
+    "emailError": null,
+    "passwordValue": null,
+    "passwordError": null
+  },
+  {
+    "firstNameValue": null,
+    "firstNameError": null,
+    "lastNameValue": "name-",
+    "lastNameError": "Invalid last name",
+    "emailValue": null,
+    "emailError": null,
+    "passwordValue": null,
+    "passwordError": null
+  },
+  {
+    "firstNameValue": null,
+    "firstNameError": null,
+    "lastNameValue": "name!@#$%^&*()_+=",
+    "lastNameError": "Invalid last name",
+    "emailValue": null,
+    "emailError": null,
+    "passwordValue": null,
+    "passwordError": null
+  }
+]
