@@ -7,15 +7,15 @@ import properties.JsonReader;
 
 import java.io.IOException;
 
-import static constants.Constants.testDataPathsMyProfile.*;
+import static constants.Constants.testDataPaths.*;
 
 @Data
 @JsonAutoDetect
 public class UnassignedUser {
 
     private String password;
-    private String firstName;
-    private String lastName;
+    private String name;
+    private String sureName;
     private String email;
 
     public UnassignedUser() {}
@@ -30,7 +30,7 @@ public class UnassignedUser {
         ObjectMapper objectMapper = new ObjectMapper();
         UnassignedUser user = null;
         try {
-            String jsonString = JsonReader.getJsonFile(jsonPath);
+          String jsonString = JsonReader.getJsonFile(jsonPath);
             user = objectMapper.readValue(jsonString, UnassignedUser.class);
         } catch (IOException e) {
             e.printStackTrace();

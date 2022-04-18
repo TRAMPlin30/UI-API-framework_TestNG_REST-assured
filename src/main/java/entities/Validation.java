@@ -7,7 +7,7 @@ import lombok.Data;
 import java.io.File;
 import java.io.IOException;
 
-import static constants.Constants.testDataPathsMyProfile.INVALID_DATA;
+import static constants.Constants.testDataPaths.INVALID_DATA;
 
 @Data
 @JsonAutoDetect

@@ -25,7 +25,7 @@ public class Constants {
     }
 
     public interface testDataPaths {
-        String dir = System.getProperty("basedir");
+        String dir = "D:/Softserve/WHAT_API/WHAT_TAQC_JavaDP223";
         String ADMIN_DATA_JSON = dir + "\\src\\main\\resources\\testData\\Admin.json",
                 MENTOR_DATA_JSON = dir + "\\src\\main\\resources\\testData\\Mentor.json",
                 SECRETARY_DATA_JSON = dir + "\\src\\main\\resources\\testData\\Secretary.json",
@@ -38,5 +38,7 @@ public class Constants {
                 INVALID_DATA_PASSWORD_CONFIRM_FIELD_JSON = dir + "\\src\\main\\resources\\registration\\InvalidDataPasswordConfirm.json",
                 INVALID_DATA_EMAIL_LOGIN_FIELD_JSON = dir + "\\src\\main\\resources\\auth\\InvalidDataEmail.json",
                 INVALID_DATA_PASSWORD_LOGIN_FIELD_JSON = dir + "\\src\\main\\resources\\auth\\InvalidDataPassword.json";
+        String PASSWORD = dir + "\\src\\main\\resources\\testData\\Password.json";
+        String INVALID_DATA = dir + "\\src\\main\\resources\\testData\\PasswordData.json";
     }
 }
