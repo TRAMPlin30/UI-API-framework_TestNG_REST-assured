@@ -15,7 +15,10 @@ public class Messages {
                 MESSAGE_ALERT_TOO_SHORT_PASSWORD = "Password must contain at least 8 characters",
                 MESSAGE_ALERT_TOO_LONG_PASSWORD = "Password must contain 16 characters maximum",
                 MESSAGE_ALERT_CONFIRM_PASSWORD = "You should confirm your password",
-                MESSAGE_ALERT_PROVIDE_NEW_PASSWORD = "You should provide a new password";
+                MESSAGE_ALERT_PROVIDE_NEW_PASSWORD = "You should provide a new password",
+                MESSAGE_UNAUTHORIZED_401 = "Incorrect credentials, please try again.",
+                MESSAGE_UNAUTHORIZED_403 = " is registered and waiting assign.";
+
     }
 
     public interface DoneMessages {

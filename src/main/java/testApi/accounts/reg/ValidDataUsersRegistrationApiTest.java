@@ -1,29 +1,27 @@
-package testApi.registration;
+package testApi.accounts.reg;
 
 import entities.RegisteredUser;
-import entities.ValidRegistrationData;
+import entities.apiEntities.ValidRegistrationData;
 import io.restassured.http.ContentType;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import testApi.base.BaseApiTest;
 
 import static constants.ApiConstantsURL.accounts.*;
 import static io.restassured.RestAssured.given;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class ValidDataUsersRegistrationApiTest extends BaseApiTest {
 
     public static ValidRegistrationData validRegistrationData = new ValidRegistrationData();
     public static RegisteredUser registeredUser = null;
 
-    @Test(description = "registration")
+    @Test(description = "registration with invalid data")
     public void verifyPossibilityRegistration() {
 
         registeredUser = given()
-                .contentType(ContentType.JSON)
-                .body(validRegistrationData)
-                .log().method().and().log().uri()
+                .spec(setUp(validRegistrationData))
                 .when()
-                .post(BASE_URL + REG_POINT_URL)
+                .post(BASE_URL + REG_END_POINT_URL)
                 .then()
                 .assertThat()
                 .statusCode(200)
@@ -31,9 +29,9 @@ public class ValidDataUsersRegistrationApiTest extends BaseApiTest {
                 .extract()
                 .as(RegisteredUser.class);
 
-        Assert.assertEquals(validRegistrationData.getFirstName(), registeredUser.getFirstName());
-        Assert.assertEquals(validRegistrationData.getLastName(), registeredUser.getLastName());
-        Assert.assertEquals(validRegistrationData.getEmail(), registeredUser.getEmail());
+        assertThat(validRegistrationData.getFirstName()).contains(registeredUser.getFirstName());
+        assertThat(validRegistrationData.getLastName()).contains(registeredUser.getLastName());
+        assertThat(validRegistrationData.getEmail()).contains(registeredUser.getEmail());
 
     }
 }

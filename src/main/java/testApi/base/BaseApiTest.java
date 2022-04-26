@@ -8,7 +8,7 @@ import io.restassured.specification.RequestSpecification;
 
 import java.util.Map;
 
-import static constants.ApiConstantsURL.accounts.AUTH_POINT_URL;
+import static constants.ApiConstantsURL.accounts.AUTH_END_POINT_URL;
 import static constants.ApiConstantsURL.accounts.BASE_URL;
 import static io.restassured.RestAssured.given;
 
@@ -30,6 +30,14 @@ public abstract class BaseApiTest {
                 .build();
     }
 
+    public RequestSpecification loginReturnPassword(String role) {
+        return new RequestSpecBuilder()
+                .setContentType(ContentType.JSON)
+                .setBaseUri(BASE_URL)
+                .addHeader("authorization", role)
+                .build();
+    }
+
     public Map<String, String> credentials(String role) {
         user = User.createUser(role);
         Map<String, String> credential = new LinkedTreeMap<>();
@@ -40,16 +48,35 @@ public abstract class BaseApiTest {
 
     public String takeToken(String role) {
         return given()
-                .contentType(ContentType.JSON)
-                .body(credentials(role))
-                .log()
-                .all()
+                .spec(setUp(credentials(role)))
                 .when()
-                .post(BASE_URL + AUTH_POINT_URL)
+                .post(BASE_URL + AUTH_END_POINT_URL)
                 .then()
                 .statusCode(200)
                 .extract()
                 .response()
                 .header("authorization");
     }
+
+
+    public static RequestSpecification setUp(Object object) {
+        return new RequestSpecBuilder()
+                .setContentType(ContentType.JSON)
+                .setBody(object)
+                .build()
+                .log().method()
+                .log().uri()
+                .log().body();
+    }
+    public static RequestSpecification setUp() {
+        return new RequestSpecBuilder()
+                .setContentType(ContentType.JSON)
+                .build()
+                .log().method()
+                .log().uri()
+                .log().body();
+    }
+
+
+
 }

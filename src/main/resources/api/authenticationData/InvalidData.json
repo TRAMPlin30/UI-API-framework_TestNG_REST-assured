@@ -1,0 +1,74 @@
+[
+  {
+    "email": "@example.com",
+    "password": "0XyCwz_U",
+    "errorCode": 0,
+    "errorMessage": "'Email' is not a valid email address."
+
+  },
+  {
+    "email": "user%example.com",
+    "password": "0XyCwz_U",
+    "errorCode": 0,
+    "errorMessage": "'Email' is not a valid email address."
+
+  },
+  {
+    "email": "userexample.com",
+    "password": "0XyCwz_U",
+    "errorCode": 0,
+    "errorMessage": "'Email' is not a valid email address."
+
+  },
+  {
+    "email": "u",
+    "password": "0XyCwz_U",
+    "errorCode": 0,
+    "errorMessage": "'Email' is not a valid email address."
+
+  },
+  {
+    "email": "",
+    "password": "0XyCwz_U",
+    "errorCode": 0,
+    "errorMessage": "'Email' must not be empty."
+
+  },
+  {
+    "email": "user@example.com",
+    "password": "stringst",
+    "errorCode": 0,
+    "errorMessage": "Password must have at least eight characters, at least one uppercase letter, one lowercase letter one number and special character"
+  },
+  {
+    "email": "user@example.com",
+    "password": "ddddddddddddddddddddddddddddddddddddddddddddddddddd",
+    "errorCode": 0,
+    "errorMessage": "The length of 'Password' must be 30 characters or fewer. You entered 51 characters."
+  },
+  {
+    "email": "user@example.com",
+    "password": "",
+    "errorCode": 0,
+    "errorMessage": "'Password' must not be empty."
+  },
+  {
+    "email": "user@example.com",
+    "password": "d",
+    "errorCode": 0,
+    "errorMessage": "The length of 'Password' must be at least 8 characters. You entered 1 characters."
+  },
+  {
+    "email": "user@example.com",
+    "password": "рпрпрпрп",
+    "errorCode": 0,
+    "errorMessage": "Password must have at least eight characters, at least one uppercase letter, one lowercase letter one number and special character"
+  },
+  {
+    "email": "",
+    "password": "",
+    "errorCode": 0,
+    "errorMessage": "'Email' must not be empty."
+
+  }
+]
