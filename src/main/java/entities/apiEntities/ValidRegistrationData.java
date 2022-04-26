@@ -1,7 +1,7 @@
-package entities;
+package entities.apiEntities;
 
 import lombok.Getter;
-import testApi.registration.validDataForRegistration.ValidStaticProvider;
+import testApi.accounts.reg.validDataForRegistration.ValidStaticProvider;
 
 
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package testApi.registration.validDataForRegistration;
+package testApi.accounts.reg.validDataForRegistration;
 
 import org.testng.annotations.DataProvider;
 

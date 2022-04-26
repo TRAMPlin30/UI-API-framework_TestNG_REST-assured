@@ -1,0 +1,10 @@
+[
+  {
+    "email": "mary.lewis@example.com",
+    "firstName": "string",
+    "lastName": "string",
+    "password": "stringst",
+    "confirmPassword": "string"
+  }
+
+]
