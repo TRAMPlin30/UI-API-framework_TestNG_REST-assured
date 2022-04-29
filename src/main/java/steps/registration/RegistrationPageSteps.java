@@ -110,32 +110,32 @@ public class RegistrationPageSteps extends BasePageSteps {
     }
 
     public void verifyFirstNameErrorMessage(String error) {
-        System.out.println(registrationPage.getMessageErrorFirstName().getText());
+
         Assert.assertEquals(registrationPage.getMessageErrorFirstName().getText(), error, "Message error does not match!!!");
     }
 
     public void verifyLastNameErrorMessage(String error) {
-        System.out.println(registrationPage.getMessageErrorLastName().getText());
+
         Assert.assertEquals(registrationPage.getMessageErrorLastName().getText(), error, "Message error does not match!!!");
     }
 
     public void verifyEmailErrorMessage(String error) {
-        System.out.println(registrationPage.getMessageErrorEmail().getText());
+
         Assert.assertEquals(registrationPage.getMessageErrorEmail().getText(), error, "Message error does not match!!!");
     }
 
     public void verifyPasswordErrorMessage(String error) {
-        System.out.println(registrationPage.getMessageErrorPassword().getText());
+
         Assert.assertEquals(registrationPage.getMessageErrorPassword().getText(), error, "Message error does not match!!!");
     }
 
     public void verifyConfirmPasswordErrorMessage(String error) {
-        System.out.println(registrationPage.getMessageErrorPasswordConfirm().getText());
+
         Assert.assertEquals(registrationPage.getMessageErrorPasswordConfirm().getText(), error, "Message error does not match!!!");
     }
 
     public void verifyExistingAccountErrorMessage(String error) {
-        System.out.println(registrationPage.getMessageExistingAccount().getText());
+
         Assert.assertEquals(registrationPage.getMessageExistingAccount().getText(), error, "Message error does not match!!!");
     }
 
