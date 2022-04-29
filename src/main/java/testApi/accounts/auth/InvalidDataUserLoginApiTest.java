@@ -4,7 +4,6 @@ import entities.RegisteredUser;
 import entities.apiEntities.ValidRegistrationData;
 import entities.apiEntities.BadRequestApi;
 import entities.apiEntities.InvalidLoginDataApi;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import testApi.accounts.auth.invalidDataForLogin.InvalidStaticProviderApi;
 import testApi.base.BaseApiTest;
@@ -17,7 +16,6 @@ import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
 public class InvalidDataUserLoginApiTest extends BaseApiTest {
-
 
     @Test  (dataProviderClass = InvalidStaticProviderApi.class, dataProvider = "invalidData_400",
             description = "Impossible to log in")
@@ -33,8 +31,9 @@ public class InvalidDataUserLoginApiTest extends BaseApiTest {
                 .body()
                 .as(BadRequestApi.class);
 
-        Assert.assertEquals(badRequest.getError().code, invalidData.getErrorCode());
-        Assert.assertEquals(badRequest.getError().message, invalidData.getErrorMessage());
+        assertThat(badRequest.getError().code).isEqualTo(invalidData.getErrorCode());
+        assertThat(badRequest.getError().message).isEqualTo(invalidData.getErrorMessage());
+
     }
 
 
@@ -54,7 +53,7 @@ public class InvalidDataUserLoginApiTest extends BaseApiTest {
                 .body()
                 .asString();
 
-        Assert.assertEquals(response, MESSAGE_UNAUTHORIZED_401);
+        assertThat(response).isEqualTo(MESSAGE_UNAUTHORIZED_401);
     }
 
 
@@ -86,6 +85,7 @@ public class InvalidDataUserLoginApiTest extends BaseApiTest {
                 .extract()
                 .body()
                 .asString();
+
         assertThat(response).contains(unassignedUser.get("email") + MESSAGE_UNAUTHORIZED_403);
     }
 }

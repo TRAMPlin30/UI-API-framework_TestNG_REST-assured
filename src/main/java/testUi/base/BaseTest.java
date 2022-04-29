@@ -13,12 +13,12 @@ public class BaseTest {
     protected User user;
     protected Users users;
 
-    //@Parameters({"Role"})
+
     @BeforeClass
     public void setUp() {
         driver = Drivers.getDriver(Drivers.Driver.CHROMEDRIVER);
         user = User.createUser("Admin");
-        //users = Users.createUser(role);
+
         authPageSteps = new AuthPageSteps(driver);
     }
 

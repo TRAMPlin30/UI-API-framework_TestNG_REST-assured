@@ -17,7 +17,8 @@ public class Messages {
                 MESSAGE_ALERT_CONFIRM_PASSWORD = "You should confirm your password",
                 MESSAGE_ALERT_PROVIDE_NEW_PASSWORD = "You should provide a new password",
                 MESSAGE_UNAUTHORIZED_401 = "Incorrect credentials, please try again.",
-                MESSAGE_UNAUTHORIZED_403 = " is registered and waiting assign.";
+                MESSAGE_UNAUTHORIZED_403 = " is registered and waiting assign.",
+                MESSAGE_ALERT_CHARACTERS  = "The length of 'First Name' must be 30 characters or fewer. You entered 31 characters.";
 
     }
 
@@ -38,5 +39,10 @@ public class Messages {
                 TEXT_NOT_SAME_MESSAGE = "Text is NOT the same!",
                 DISABLED_BUTTON_MESSAGE = "Tab is DISABLED!",
                 ENABLED_BUTTON_MESSAGE = "Tab is ENABLED!";
+    }
+
+    public interface UnassignedUsers {
+        String MESSAGE_ALERT_ACCOUNT_IS_ASSIGNED = "This account already assigned.",
+                MESSAGE_ACCOUNT_IS_NOT_FOUND = "Account not found";
     }
 }

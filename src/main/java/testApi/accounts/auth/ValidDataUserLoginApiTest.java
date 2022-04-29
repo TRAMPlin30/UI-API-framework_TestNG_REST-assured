@@ -18,7 +18,7 @@ public class ValidDataUserLoginApiTest extends BaseApiTest {
     protected User userData;
     protected AuthorizedUserApi authorizedUserApi;
 
-    @Test(dataProviderClass = ValidStaticProviderApi.class, dataProvider = "createValidLoginData")
+    @Test(dataProviderClass = ValidStaticProviderApi.class, dataProvider = "validData")
     public void verifyUserCanLogin(String role) {
 
         userData = User.createUser(role);

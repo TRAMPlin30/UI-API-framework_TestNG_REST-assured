@@ -1,6 +1,5 @@
 package testApi.accounts.accounts;
 
-import io.restassured.http.ContentType;
 import org.testng.annotations.Test;
 import testApi.accounts.auth.validDataForLogin.ValidStaticProviderApi;
 import testApi.base.BaseApiTest;
@@ -20,11 +19,7 @@ public class InvalidGetAccountsListApiTest extends BaseApiTest {
                 .when()
                 .get(ACCOUNTS_LIST_END_POINT_URL)
                 .then()
-                .statusCode(403)
-                .extract()
-                .response()
-                .prettyPrint();
-
+                .statusCode(403);
     }
 
     @Test (description = "Unauthorized (not authorized in any way)")
@@ -35,10 +30,6 @@ public class InvalidGetAccountsListApiTest extends BaseApiTest {
                 .when()
                 .get(BASE_URL + ACCOUNTS_LIST_END_POINT_URL)
                 .then()
-                .statusCode(401)
-                .extract()
-                .response()
-                .prettyPrint();
-
+                .statusCode(401);
     }
 }

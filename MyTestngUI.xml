@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="D:/Softserve/WHAT_API/WHAT_TAQC_JavaDP223">
+        <classes>
+            <class name="testUi.auth.InvalidDataUserLoginTest">
+                <methods>
+                    <include name="verifyErrorMessagesEmailField"/>
+                    <include name="verifyErrorMessagesPasswordField"/>
+                </methods>
+            </class>
+            <class name="testUi.auth.ValidDataUserLoginCycleTest">
+                <methods>
+                    <include name="verifyAllRolesCanLogin"/>
+                </methods>
+            </class>
+            <class name="testUi.auth.ValidDataUserLoginTest">
+                <methods>
+                    <include name="verifyUserCanLogin"/>
+                </methods>
+            </class>
+            <class name="testUi.forgotPassword.ForgottenPasswordSendTest">
+                <methods>
+                    <include name="verifyThatUserCanSendForgotPassword"/>
+                </methods>
+            </class>
+            <class name="testUi.registration.InvalidDataUsersRegistrationTest">
+                <methods>
+                    <include name="verifyErrorMessagesFirstNameField"/>
+                    <include name="verifyErrorMessagesLastNameField"/>
+                    <include name="verifyErrorMessagesEmailField"/>
+                    <include name="verifyErrorMessagesPasswordField"/>
+                    <include name="verifyErrorMessagesPasswordConfirmField"/>
+                    <include name="verifyErrorMessagesAccountAlreadyExists"/>
+                </methods>
+            </class>
+            <class name="testUi.registration.ValidDataUsersRegistrationTest">
+                <methods>
+                    <include name="verifyPossibilityRegistration"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

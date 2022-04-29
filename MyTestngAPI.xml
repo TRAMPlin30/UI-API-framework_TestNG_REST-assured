@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="D:/Softserve/WHAT_API/WHAT_TAQC_JavaDP223/src/main/java/testApi">
+        <classes>
+            <class name="testApi.accounts.accounts.InvalidGetAccountsListApiTest">
+                <methods>
+                    <include name="verifyErrorMessages_403"/>
+                    <include name="verifyErrorMessages_401"/>
+                </methods>
+            </class>
+            <class name="testApi.accounts.accounts.ValidGetAccountsListApiTest">
+                <methods>
+                    <include name="verifyAdminGetAccountsList"/>
+                </methods>
+            </class>
+            <class name="testApi.accounts.auth.InvalidDataUserLoginApiTest">
+                <methods>
+                    <include name="verifyErrorMessages_400"/>
+                    <include name="verifyErrorMessages_401"/>
+                    <include name="verifyErrorMessages_403"/>
+                </methods>
+            </class>
+            <class name="testApi.accounts.auth.ValidDataUserLoginApiTest">
+                <methods>
+                    <include name="verifyUserCanLogin"/>
+                </methods>
+            </class>
+            <class name="testApi.accounts.passwordForgot.InvalidDataForgotPasswordTest">
+                <methods>
+                    <include name="verifyErrorMassage_400"/>
+                    <include name="verifyErrorMassage_404"/>
+                </methods>
+            </class>
+            <class name="testApi.accounts.passwordForgot.ValidDataForgotPasswordTest">
+                <methods>
+                    <include name="verifyUserCenSendForgotPassword"/>
+                </methods>
+            </class>
+            <class name="testApi.accounts.password.InvalidDataUpdatePasswordTest">
+                <methods>
+                    <include name="verifyErrorMessages_401"/>
+                </methods>
+            </class>
+            <class name="testApi.accounts.password.ValidDataUpdatePasswordTest">
+                <methods>
+                    <include name="verifyUserCanUpdatePassword"/>
+                </methods>
+            </class>
+            <class name="testApi.accounts.reg.InvalidDataUsersRegistrationApiTest">
+                <methods>
+                    <include name="verifyPossibilityRegistrationInvalidData"/>
+                </methods>
+            </class>
+            <class name="testApi.accounts.reg.ValidDataUsersRegistrationApiTest">
+                <methods>
+                    <include name="verifyPossibilityRegistration"/>
+                </methods>
+            </class>
+            <class name="testApi.secretaries.SecretariesListApiTest_my">
+                <methods>
+                    <include name="canGetSecretariesList"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
